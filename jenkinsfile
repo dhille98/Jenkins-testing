@@ -1,26 +1,10 @@
+@Libray(test-libray) _
 pipeline {
-    agent any
-    environment { 
-        tester = 'test'
-    }
-    options {
-        skipDefaultCheckout(true)
-    }
-    stages {
-        stage('chekout'){
-            steps {
-                git url: 'https://github.com/', branch 'main'
-            }
-        }
-        stage('stage-1') {
 
-            environment { 
-              Aws_ACCESS_KEY = credentials('secret-key')
-            }
-            steps {
-                echo 'Hello World'
-                sh 'printenv'
-            }
-        }
-    }
+agent any
+
+stage('build') {
+  echo 'Building..'
+  sayHello 'MEGASTAR'
+}
 }
