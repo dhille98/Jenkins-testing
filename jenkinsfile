@@ -6,5 +6,5 @@ agent any
 stage('build') {
   echo 'Building..'
   sayHello 'MEGASTAR'
-}
+  }
 }
