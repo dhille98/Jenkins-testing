@@ -86,6 +86,7 @@ Jenkins pipeline starchers
 	- run parametes --> A run parameter lets you select a specific build from another job. This can be helpful for promoting builds or reusing artifacts from previous builds.
 
 ====
+```
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'Branch to build')
         booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests after build')
@@ -94,6 +95,7 @@ Jenkins pipeline starchers
         file(name: 'CONFIG_FILE', description: 'Upload the configuration file')
         
     }
+```
 
 * call the pipeline in 
 ```
